@@ -1,0 +1,48 @@
+
+pt_date
+--------------------------------------------------------------------------------
+
+This library works with PHP 5.x.
+In order to run the tests, phpunit is required.
+
+This library provides a way to work with dates in php.
+
+Source in [https://github.com/gramos74/pt_date]
+
+
+
+Examples
+--------------------------------------------------------------------------------
+
+Create a pt_date object with the current date:
+    
+    date = new pt_date();
+      or
+    date = new pt_date(time());
+
+Add 2 months to the current date
+
+    date = new pt_date();
+    date->add_months(2);
+    
+Move to the begin of the month and add 5 hours:
+   
+    date = new pt_date();
+    date->move_to_begin_of_month()->add_hours(5);
+
+Get days between 2 dates:
+
+    date1 = new pt_date("2009-10-15 00:00:00");
+    date2 = new pt_date("2009-10-22 00:00:00");
+    
+    echo $date1->days_between($date2); --> 7
+        or
+    echo $date1->days_between("2009-10-22 00:00:00"); --> 7
+
+
+
+License
+--------------------------------------------------------------------------------
+
+Licensed under the Apache License, Version 2.0 (the "License")  (see LICENSE)
+Gabriel Ramos <gabi@gabiramos.com>
